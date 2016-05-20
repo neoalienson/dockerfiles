@@ -1,0 +1,1 @@
+A general purpose image with nodejs and commonly used npm packages
