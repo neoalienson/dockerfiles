@@ -25,4 +25,4 @@ VOLUME /app
 
 WORKDIR /app
 EXPOSE 8080
-CMD ["webpack-dev-server", "--content-base", "build"]
+CMD ["webpack-dev-server", "--content-base", "build", "--host", "0.0.0.0"]
