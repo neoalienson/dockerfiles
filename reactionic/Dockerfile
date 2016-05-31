@@ -24,5 +24,5 @@ RUN wget https://github.com/reactionic/reactionic-kitchensink/archive/master.zip
 VOLUME /app
 
 WORKDIR /app
-EXPOSE 8000
+EXPOSE 8080
 CMD ["webpack-dev-server", "--content-base", "build"]
