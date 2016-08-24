@@ -17,8 +17,10 @@ docker run --name svn-server-sandbox -d -p 3690:3690 \
 
 A container with name 'svn-server-sandbox' is created.
 
-If you want to persist the repository to a local volume on ~/svn. However
-you will need to create the repository and create the structure
+Keeping the SVN repoistory outside the container
+-----
+If you want to persist the repository to a local volume on ~/svn. However,
+you will need to create the repository and the structure
 
 ```
 docker run --name svn-server-sandbox -d -p 3690:3690 \
