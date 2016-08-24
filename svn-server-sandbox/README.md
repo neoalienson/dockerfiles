@@ -1,7 +1,10 @@
 SVN Server Sandbox
 =====
 
-A simple SVN (subversion) server for sandboxing
+A simple SVN (subversion) server for sandboxing with
+* full access from anyone
+* contains a repostiory 'sandbox'
+* the repository has initial structure, i.e., trunk, branches, tags.
 
 To simply start the container and forward the listening port 3690
 
@@ -10,10 +13,28 @@ docker run --name svn-server-sandbox -d -p 3690:3690 \
   neoalienson/svn-server-sandbox
 ```
 
-If you want to persist you changes to a local volume on /home/svn
+A container with name 'svn-server-sandbox' is created.
+
+If you want to persist the repository to a local volume on ~/svn. However
+you will need to create the repository and create the structure
 
 ```
 docker run --name svn-server-sandbox -d -p 3690:3690 \
-  -v /home/svn:/var/opt/svn \
+  -v ~/svn:/var/opt/svn \
   neoalienson/svn-server-sandbox
+
+docker exec -it svn-server-sandbox \
+    svnadmin create sandbox
+
+docker exec -it svn-server-sandbox \
+    svn mkdir \
+    file:///var/opt/svn/sandbox/tags \
+    file:///var/opt/svn/sandbox/branches \
+    file:///var/opt/svn/sandbox/trunk \
+    -m 'inital structure'
+
 ```
+
+After starting the container, you checkout the 'sandbox' repository with
+`svn co svn://[docker]/sandbox`, or checkout by any svn client with svn URL
+svn://[docker]/sandbox
