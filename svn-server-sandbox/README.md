@@ -1,11 +1,13 @@
 SVN Server Sandbox
 =====
 
-A simple SVN (subversion) server for sandboxing with
+A simple SVN (subversion) server for sand-boxing with
 * full access from anyone
-* contains a repostiory 'sandbox'
+* contains a repository 'sandbox'
 * the repository has initial structure, i.e., trunk, branches, tags.
 
+Start the svn container
+-----
 To simply start the container and forward the listening port 3690
 
 ```
