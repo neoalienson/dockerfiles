@@ -42,3 +42,13 @@ docker exec -it svn-server-sandbox \
 After starting the container, you checkout the 'sandbox' repository with
 `svn co svn://[docker]/sandbox`, or checkout by any svn client with svn URL
 svn://[docker]/sandbox
+
+Remarks
+-----
+Running svn sandbox in Docker maybe overkill as you can create a sandbox in local file system,
+
+```
+cd c:\
+svnadmin create some_repo                       
+svn co file:///C:/some_repo
+```
