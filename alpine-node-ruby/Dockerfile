@@ -1,4 +1,4 @@
-FROM mhart/alpine-node:base
+FROM mhart/alpine-node:latest
 MAINTAINER neo [at] orz [dot] hk
 
 ENV RUBY_MAJOR 2.1
