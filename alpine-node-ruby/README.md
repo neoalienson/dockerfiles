@@ -1,4 +1,4 @@
-An alphine nodejs ruby package
+NodeJS + Ruby on Alpine Linux
 =====
 
 This image combines nodejs with ruby from evild/alpine-ruby.
