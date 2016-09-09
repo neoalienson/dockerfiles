@@ -1,4 +1,4 @@
-Parse Doc on NodeJS + Ruby with Alpine Linux
+Parse  platform guides / doc on NodeJS + Ruby with Alpine Linux
 =====
 
 A container has the Parse Doc (https://github.com/ParsePlatform/docs)
