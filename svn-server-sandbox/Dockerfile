@@ -1,5 +1,5 @@
 FROM alpine:latest
-MAINTAINER garethflowers
+MAINTAINER neo [at] orz [dot] hk
 
 WORKDIR /var/opt/svn
 
