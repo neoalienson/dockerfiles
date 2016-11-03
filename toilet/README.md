@@ -4,7 +4,7 @@ toilet in alpine Linux
 
 Usage
 =====
-    docker run neoalienson/toilet <message>
+    docker run --rm neoalienson/toilet <message>
 
 To check available fonts
-    docker run --entrypoint find neoalienson/toilet / | grep figlet
+    docker run --rm --entrypoint find neoalienson/toilet / | grep figlet
