@@ -1,0 +1,26 @@
+# Use postgres/example user/password credentials
+version: '3.1'
+
+services:
+
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: example
+
+#  adminer:
+#    image: adminer
+#    restart: always
+#    ports:
+#      - 8080:8080
+
+  sonarqube:
+    image: sonarqube
+    restart: always
+    ports:
+      - 9000:9000
+      - 9092:9092
+    environment:
+      SONARQUBE_JDBC_USERNAME: postgres
+      SONARQUBE_JDBC_PASSWORD: example
